@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Les tableaux {% endblock %}
+{% block navBarTitle %}LES TABLEAUX{% endblock %}
+{% block TableauxActive %}active{% endblock %}
+
+{% block contenu %}
+    <style>
+        .imgPointer:hover{
+            cursor: pointer;
+        }
+    </style>
+    <section class="mx-auto h-75 mt-4">
+        <div class="row row-cols-1 row-cols-md-6 mx-auto" style="width: 95%;">
+            {% for tableau in tableaux %}
+                <div class="col mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="{{ tableau.imageUrl }}" class="card-img-top img-fluid h-75 imgPointer" id="{{ 'img'~tableau.id }}" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ tableau.titre }}</h5>
+                            <i><span style="font-size: 0.7rem">avec {{ tableau.memoires|length }} memories</span></i>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript" language="javascript">
+                    $("#{{ 'img'~tableau.id }}").click(function () {
+                        window.location = '{{ path('app_memories_tableaux_memoires', {'id': tableau.url})  }}';
+                    });
+                </script>
+
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

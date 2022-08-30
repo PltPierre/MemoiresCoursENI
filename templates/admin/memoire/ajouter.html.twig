@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {% if app.request.get('_route') == "app_admin_memoire_ajouter" %}
+        {{ parent() }} Admin - Ajouter Mémoire
+    {% else %}
+        {{ parent() }} Admin - Modifier Mémoire
+    {% endif %}
+{% endblock %}
+
+{% block MemoireAdminActive %}active{% endblock %}
+
+{% block contenu %}
+
+    <section>
+
+        <div class="mx-auto my-auto" style="width: 50%">
+            {{ form_start(form) }}
+                {{ form_rest(form) }}
+                <div class="w-100 col d-flex justify-content-center">
+                    {% if app.request.get('_route') == "app_admin_memoire_ajouter" %}
+                        <button class="btn btn-success" type="submit">Ajouter</button>
+                    {% else %}
+                        <button class="btn btn-success" type="submit" onclick="return confirm('Etes-vous sur de vouloir modifier cette mémoire ?')">Modifier</button>
+                    {% endif %}
+                    <a href="{{ path('app_admin_memoire') }}" class="btn btn-danger ms-5"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+                </div>
+
+            {{ form_end(form) }}
+        </div>
+
+    </section>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} Admin - Modifier Utilisateur {% endblock %}
+{% block UserAdminActive %}active{% endblock %}
+
+
+{% block contenu %}
+
+    <section>
+
+        <div class="mx-auto my-auto" style="width: 50%">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col">{{ form_row(form.nom) }}</div>
+                <div class="col">{{ form_row(form.prenom) }}</div>
+            </div>
+
+            {{ form_row(form.email) }}
+            {{ form_row(form.imgUrl) }}
+
+            <button class="btn btn-success" type="submit" onclick="return confirm('Etes-vous sur de vouloir modifier cet agent ?')">Modifier</button>
+            <a href="{{ path('app_admin_user') }}" class="btn btn-danger ms-5"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+            {{ form_end(form) }}
+        </div>
+
+    </section>
+
+
+{% endblock %}

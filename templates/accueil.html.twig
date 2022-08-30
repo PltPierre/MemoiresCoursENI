@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% import 'macro/macro.html.twig' as macro %}
+
+{% block title %}{{ parent() }} Accueil {% endblock %}
+{% block navBarTitle %}NOS SOUVENIRS{% endblock %}
+{% block accueilActive %}active{% endblock %}
+
+{% block contenu %}
+    <style>
+        .imgPointer:hover{
+            cursor: pointer;
+        }
+    </style>
+    <section class="mx-auto h-75 mt-4">
+        <div class="row row-cols-1 row-cols-md-6 mx-auto" style="width: 95%;">
+            {% for memoire in memoires %}
+                <div class="col mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="{{ memoire.image }}" class="card-img-top img-fluid h-75 imgPointer" id="{{ 'img'~memoire.id }}" alt="..." data-toggle="modal" data-target="#souvenirModal">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ memoire.titre }}</h5>
+                            <i><span style="font-size: 0.7rem">{{ memoire.datePublication|date("d/m/Y") }}</span></i>
+                        </div>
+                    </div>
+                </div>
+                {{ macro.create_modal(memoire.id, memoire.titre, memoire.description,'img'~memoire.id,memoire.image, memoire.datePublication|date("d/m/Y")) }}
+
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

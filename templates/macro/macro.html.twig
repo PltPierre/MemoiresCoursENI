@@ -1,0 +1,28 @@
+{%- macro create_modal(id,title,desc,imgID,imgSrc, date) -%}
+    {% apply spaceless %}
+        <div class="modal fade" id="{{ id }}" tabindex="-1" aria-labelledby="souvenirModalLabel" aria-hidden="true" style="text-align: center;">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ title }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="max-height: 75vh;">
+                        <img src="{{ imgSrc }}" class="img-fluid" style="height: 25vh;">
+                        <br>
+                        <br>
+                        {{ desc }}
+                        <br>
+                        <br>
+                        <i><span style="font-size: 0.7rem">Publication : {{ date }}</span></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" language="javascript">
+            $("#{{ imgID }}").click(function () {
+                $('#{{ id }}').modal('show');
+            });
+        </script>
+    {% endapply %}
+{%- endmacro -%}

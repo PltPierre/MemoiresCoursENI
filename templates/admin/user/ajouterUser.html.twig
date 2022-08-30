@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} Admin - Ajouter Utilisateur {% endblock %}
+{% block UserAdminActive %}active{% endblock %}
+
+
+{% block contenu %}
+
+    <section>
+
+        <div class="mx-auto my-auto" style="width: 50%">
+            {{ form_start(form) }}
+
+            <div class="row">
+                <div class="col">{{ form_row(form.nom) }}</div>
+                <div class="col">{{ form_row(form.prenom) }}</div>
+            </div>
+
+            {{ form_row(form.email) }}
+
+            <div class="row">
+                <div class="col">{{ form_row(form.password.first) }}</div>
+                <div class="col">{{ form_row(form.password.second) }}</div>
+            </div>
+
+            {{ form_rest(form) }}
+
+            <button class="btn btn-success" type="submit">Ajouter</button>
+            <a href="{{ path('app_admin_user') }}" class="btn btn-danger ms-5"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+
+            {{ form_end(form) }}
+        </div>
+
+    </section>
+
+
+{% endblock %}

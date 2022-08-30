@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% import 'macro/macro.html.twig' as macro %}
+
+{% block title %}{{ parent() }} Mes Souvenirs {% endblock %}
+
+{% block navBarTitle %}VOS SOUVENIRS{% endblock %}
+{% block vosSouvenirsActive %}active{% endblock %}
+
+{% block contenu %}
+    <section class="mx-auto h-75 mt-4">
+        <div class="row row-cols-1 row-cols-md-4 mx-auto" style="width: 95%;">
+            {% for i in 1..100 %}
+                {% set title = "SOUVENIR "~i %}
+                <div class="col mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="{{ asset('img/banane.jpg') }}" class="card-img-top img-fluid" id="img{{ i }}" alt="..." data-toggle="modal" data-target="#souvenirModal">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ title }}</h5>
+                        </div>
+                    </div>
+                </div>
+                {{ macro.create_modal('souvenir'~i, title, 'desc de '~title,'img'~i,asset('img/banane.jpg')) }}
+
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

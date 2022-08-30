@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Admin - Ajouter Tableau {% endblock %}
+{% block TableauxAdminActive %}active{% endblock %}
+
+{% block contenu %}
+
+    <section>
+
+        <div class="mx-auto my-auto" style="width: 50%">
+            {{ form_start(form) }}
+            {{ form_rest(form) }}
+            <div class="w-100 col d-flex justify-content-center">
+                {% if app.request.get('_route') == "app_admin_tableau_ajouter" %}
+                    <button class="btn btn-success" type="submit">Ajouter</button>
+                {% else %}
+                    <button class="btn btn-success" type="submit" onclick="return confirm('Etes-vous sur de vouloir modifier ce tableau ?')">Modifier</button>
+                {% endif %}
+                <a href="{{ path('app_admin_tableau') }}" class="btn btn-danger ms-5"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+
+    </section>
+
+{% endblock %}
