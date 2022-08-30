@@ -24,7 +24,6 @@
                         <th scope="col">#</th>
                         <th scope="col">Titre</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Image</th>
                         <th scope="col">Date de Publication</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -36,7 +35,6 @@
                             <th scope="row">{{ counter }}</th>
                             <td>{{ memoire.titre }}</td>
                             <td>{{ memoire.description[:50] }}</td>
-                            <td>{{ memoire.image }}€</td>
                             <td>{{ memoire.datePublication | date("d/m/Y") }}</td>
                             <td>
                                 <a class="btn" href="{{ path('app_admin_supprimer', {'id': memoire.id}) }}"

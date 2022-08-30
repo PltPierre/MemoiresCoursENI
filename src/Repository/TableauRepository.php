@@ -39,6 +39,16 @@ class TableauRepository extends ServiceEntityRepository
         }
     }
 
+    public function search(string $titre): array
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.titre LIKE :val')
+            ->setParameter('val', "%$titre%")
+            ->getQuery()
+            ->getArrayResult()
+            ;
+    }
+
 //    /**
 //     * @return Tableau[] Returns an array of Tableau objects
 //     */

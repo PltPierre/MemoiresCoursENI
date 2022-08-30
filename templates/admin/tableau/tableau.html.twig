@@ -24,7 +24,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Titre</th>
                         <th scope="col">Url</th>
-                        <th scope="col">UrlImage</th>
+                        <th scope="col">Nombre de mémoires</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -35,7 +35,7 @@
                             <th scope="row">{{ counter }}</th>
                             <td>{{ tableau.titre }}</td>
                             <td>{{ tableau.url }}</td>
-                            <td>{{ tableau.imageUrl }}</td>
+                            <td>{{ tableau.memoires|length }}</td>
                             <td>
                                 <a class="btn" href="{{ path('app_admin_tableau_supprimer', {'id': tableau.id}) }}"
                                    onclick="return confirm('Etes-vous sur de vouloir supprimer cette mémoire ?')"><i

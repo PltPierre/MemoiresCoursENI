@@ -39,6 +39,16 @@ class MemoireRepository extends ServiceEntityRepository
         }
     }
 
+    public function search(string $titre): array
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.titre LIKE :val')
+            ->setParameter('val', "%$titre%")
+            ->getQuery()
+            ->getArrayResult()
+        ;
+    }
+
 //    /**
 //     * @return Memoire[] Returns an array of Memoire objects
 //     */

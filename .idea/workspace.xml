@@ -4,15 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c497d6c-4fcc-4507-abe7-a58f69ebd69a" name="Changes" comment="" />
+    <list default="true" id="6c497d6c-4fcc-4507-abe7-a58f69ebd69a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/scripts/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Field/SearchableEntityType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/coursSF.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coursSF.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Memories/MemoireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Memories/MemoireController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Memories/TableauxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Memories/TableauxController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Memoire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Memoire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tableau.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tableau.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/MermoireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MermoireType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TableauType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TableauType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/MemoireRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/MemoireRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TableauRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TableauRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accueil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lesSouvenirs.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/memoire/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/memoire/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/tableau/tableau.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/tableau/tableau.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/memories/tableaux/infosTableau.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/memories/tableaux/infosTableau.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profil/profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profil/profil.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,6 +126,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -111,7 +136,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -139,6 +165,9 @@
       <workItem from="1661176195659" duration="604000" />
       <workItem from="1661238500474" duration="6000" />
       <workItem from="1661245615247" duration="53658000" />
+      <workItem from="1661878040255" duration="704000" />
+      <workItem from="1661878765049" duration="343000" />
+      <workItem from="1661879120211" duration="12306000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ namespace App\Controller\Memories;
 
 use App\Repository\TableauRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -27,5 +28,11 @@ class TableauxController extends AbstractController
             'controller_name' => 'TableauxController',
             'tableau' => $tableau
         ]);
+    }
+
+    #[Route('/api/tableaux', name: 'app_get_tableaux')]
+    public function getMemoires(Request $request, TableauRepository $tableauRepository)
+    {
+        return $this->json($tableauRepository->search($request->query->get('q')));
     }
 }
